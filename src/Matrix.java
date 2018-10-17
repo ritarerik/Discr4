@@ -50,7 +50,10 @@ public class Matrix {
 			System.out.println("        |—————");
 
 			for (int i = 0; i < A.length; i++) {
-				System.out.print("   " + c + "(" + i + ") |  " + A[i] + " ");				
+				
+				if (A[i] == -1) System.out.print("   " + c + "(" + i + ") |  -");
+				else System.out.print("   " + c + "(" + i + ") |  " + A[i] + " ");
+				
 				if (i < A.length - 1) System.out.print("\n");	        			
 			}		
 		}

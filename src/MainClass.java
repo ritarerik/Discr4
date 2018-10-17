@@ -54,7 +54,7 @@ public class MainClass {
 			        System.out.println("\n");
 			        
 			        System.out.println(">> œ–ﬂÃŒ≈ “–¿Õ«»“»¬ÕŒ≈ «¿Ã€ ¿Õ»≈ ƒÀﬂ 7-Œ… ¬≈–ÿ»Õ€ (x(6))>\n");
-			        int B[] = TransitiveClosure.getDirect(A);
+			        int B[] = TransitiveClosure.getDirect(A, 2); // œ≈–≈ƒ≈À¿“‹ Õ¿ 6!!!!!!!!!!!!!!!
 			        Matrix.printINT_VECTOR(B, 'x');
 			        
 					

@@ -43,6 +43,8 @@ public class MainClass {
 					boolean A[][] = Matrix.createBOOLEAN(input);
 					Matrix.printBOOLEAN(A, 'x', 'x'); 
 			        System.out.println("\n");
+			        
+			        
 					
 					
 				    

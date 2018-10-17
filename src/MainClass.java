@@ -10,20 +10,16 @@ public class MainClass {
 		
 		while (!exit) {
 			
-			System.out.println("> Размерность случайной матрицы >> (4;8)");
-			System.out.println("> Заранее введённые матрицы >> 1");
+			System.out.println("> Последовательный алгоритм >> 1");
+			System.out.println("> Параллельный алгоритм >> 2");
 			System.out.println("> Выход >> 0");
 			System.out.print("\n  >> ");
 			
 			int input = 0;			
 			
 			try { 
-				input = in.nextInt(); 
-				
-				if (input == 0) exit = true;
-				else if (input == 1) ;
-				else if (input < 4 || input > 8) throw new Exception();
-				
+				input = in.nextInt();				
+				if (input == 0) exit = true;				
 			} catch (Exception e) { 
 				System.out.println("\n> Неверный ввод\n");
 				continue; 
@@ -32,31 +28,25 @@ public class MainClass {
 			if (!exit) {			
 				System.out.println();
 				
-				if (input == 1) {
-				
-					boolean A[][] = {{false, true,  true,  false, false, false, false, false, false},
-									 {false, false, false, true,  false, false, false, false, false},
-									 {false, false, false, true,  false, false, false, false, false},
-									 {false, false, false, false, true,  false, false, false, false},
-									 {false, false, false, false, false, true,  true,  true,  false},
-									 {false, false, false, false, false, false, false, false, false},
-									 {false, false, false, false, false, false, false, false, false},
-									 {false, false, false, false, false, false, false, false, true},
-									 {false, false, false, false, false, false, false, false, false}};
-			        
-					System.out.println("\n");
+				if (input == 1) { // последовательный алгоритм
 					
-			        boolean B[][] = {{false, true,  true,  false, false, false, false, false, false},
-							 		 {false, false, false, false, true,  false, false, false, false},
-							 		 {false, false, false, true,  false, false, false, false, false},
-							 		 {false, false, false, false, true,  false, false, false, false},
-							 		 {false, false, false, false, false, true,  true,  true,  false},
-							 		 {false, false, false, false, false, false, false, false, false},
-							 		 {false, false, false, false, false, false, false, false, false},
-							 		 {false, false, false, false, false, false, false, false, true},
-							 		 {false, false, false, false, false, false, false, false, false}};
+					System.out.print("> Количество вершин >> ");
+					try { 
+						input = in.nextInt();				
+						if (input == 0) throw new Exception();				
+					} catch (Exception e) { 
+						System.out.println("\n> Неверный ввод\n");
+						continue; 
+					}					
+					
+					System.out.println(">> МАТРИЦА СМЕЖНОСТИ >\n");
+					boolean A[][] = Matrix.createBOOLEAN(input);
+					Matrix.printBOOLEAN(A, 'x', 'x'); 
+			        System.out.println("\n");
+					
+					
 				    
-				} else {
+				} else { // параллельный алгоритм
 					
 				}
 				

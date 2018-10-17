@@ -39,20 +39,31 @@ public class MainClass {
 						continue; 
 					}					
 					
+					System.out.println();
 					System.out.println(">> ÌÀÒĞÈÖÀ ÑÌÅÆÍÎÑÒÈ >\n");
-					boolean A[][] = Matrix.createBOOLEAN(input);
+					
+//					boolean A[][] = Matrix.createBOOLEAN(input);
+					boolean A[][] = {{false, false, true,  true,  false, false},
+							 		 {false, true,  false, false, true,  false},
+									 {false, false, false, false, false, false},
+									 {false, false, true,  false, false, false},
+									 {true,  false, false, true,  false, true},
+									 {true,  false, false, false, true,  true}};					
+					
 					Matrix.printBOOLEAN(A, 'x', 'x'); 
 			        System.out.println("\n");
 			        
+			        System.out.println(">> ÏĞßÌÎÅ ÒĞÀÍÇÈÒÈÂÍÎÅ ÇÀÌÛÊÀÍÈÅ ÄËß 7-ÎÉ ÂÅĞØÈÍÛ (x(6))>\n");
+			        int B[] = TransitiveClosure.getDirect(A);
+			        Matrix.printINT_VECTOR(B, 'x');
 			        
-					
 					
 				    
 				} else { // ïàğàëëåëüíûé àëãîğèòì
 					
 				}
 				
-				System.out.println("\n");
+				System.out.println("\n\n");
 		         
 			} 
 		}

@@ -4,11 +4,24 @@
 
 public class TransitiveClosure {
 
-	public static void getDirect(boolean A[][]) {
+	public static int[] getDirect(boolean A[][]) {
+		
+		int B[] = new int[A[0].length];
+		
+		for (int i : B) i = 0;
+		
+		
+		return B;
 		
 	}
 	
-	public static void getReverse(boolean A[][]) {
+	public static int[] getReverse(boolean A[][]) {
+		
+		int B[] = new int[A[0].length];
+		
+		
+		
+		return B;
 		
 	}
 	

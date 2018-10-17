@@ -41,6 +41,19 @@ public class Matrix {
 			if (i < A.length - 1) System.out.print("\n");	        			
 		}		
 	}
+	
+	//--------------------------------------------------------------//
+		public static void printINT_VECTOR(int A[], char c) {
+			
+			System.out.print("        |  T*");
+			System.out.println();			
+			System.out.println("        |—————");
+
+			for (int i = 0; i < A.length; i++) {
+				System.out.print("   " + c + "(" + i + ") |  " + A[i] + " ");				
+				if (i < A.length - 1) System.out.print("\n");	        			
+			}		
+		}
 		
 	
 }

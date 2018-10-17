@@ -11,6 +11,7 @@ public class TransitiveClosure {
 		B[index] = 0;	
 		
 		
+		
 		return B;
 		
 	}

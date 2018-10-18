@@ -56,6 +56,6 @@ public class Matrix {
 	//--------------------------------------------------------------//
 	public static void printComponents(int A[][]) {
 		for (int i = 0; i < A.length; i ++)  
-			System.out.println("        a(" + i + ") = {x(" + A[i][0] + "), x(" + A[i][1] + ")}");			
+			System.out.println("   " + (i + 1) + ") {x(" + A[i][0] + "), x(" + A[i][1] + ")}");			
 	}
 }

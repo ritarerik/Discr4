@@ -43,18 +43,18 @@ public class MainClass {
 					System.out.println(">> люрпхжю ялефмнярх >\n");
 					
 //					boolean A[][] = Matrix.createBOOLEAN(input);
-					boolean A[][] = {{false, false, true,  true,  false, false},
+					boolean A[][] = {{false, true, true,  false,  false, false},
 							 		 {false, true,  false, false, true,  false},
 									 {false, false, false, false, false, false},
 									 {false, false, true,  false, false, false},
-									 {true,  false, false, true,  false, true},
+									 {true,  false, false, true,  false, false},
 									 {true,  false, false, false, true,  true}};					
 					
 					Matrix.printBOOLEAN(A, 'x', 'x'); 
 			        System.out.println("\n");
 			        
 			        System.out.println(">> опълне рпюмгхрхбмне гюлшйюмхе дкъ 7-ни бепьхмш (x(6))>\n");
-			        int B[] = TransitiveClosure.getDirect(A, 2); // оепедекюрэ мю 6!!!!!!!!!!!!!!!
+			        int B[] = TransitiveClosure.getDirect(A, 1); // оепедекюрэ мю 6!!!!!!!!!!!!!!!
 			        Matrix.printINT_VECTOR(B, 'x');
 			        
 					

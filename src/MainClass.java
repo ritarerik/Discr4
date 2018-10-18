@@ -56,7 +56,11 @@ public class MainClass {
 			        System.out.println(">> опълне рпюмгхрхбмне гюлшйюмхе дкъ 7-ни бепьхмш (x(6))>\n");
 			        int B[] = TransitiveClosure.getDirect(A, 1); // оепедекюрэ мю 6!!!!!!!!!!!!!!!
 			        Matrix.printINT_VECTOR(B, 'x');
+			        System.out.println("\n");
 			        
+			        System.out.println(">> напюрмне рпюмгхрхбмне гюлшйюмхе дкъ 7-ни бепьхмш (x(6))>\n");
+			        int C[] = TransitiveClosure.getReverse(A, 2); // оепедекюрэ мю 6!!!!!!!!!!!!!!!
+			        Matrix.printINT_VECTOR(C, 'x');
 					
 				    
 				} else { // ОЮПЮККЕКЭМШИ ЮКЦНПХРЛ

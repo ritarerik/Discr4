@@ -64,7 +64,7 @@ public class MainClass {
 			        Matrix.printINT_VECTOR(C, 'x');
 			        System.out.println("\n");
 			        
-			        System.out.println(">> ÑËÀÁÛÅ ÊÎÌÏÎÍÅÍÒÛ ÃÐÀÔÀ >\n");
+			        System.out.println(">> ÏÎÑÈÊ ÑËÀÁÛÕ ÊÎÌÏÎÍÅÍÒ ÃÐÀÔÀ >\n");
 					
 					int D[][] = TransitiveClosure.getComponents(A);
 					Matrix.printComponents(D);

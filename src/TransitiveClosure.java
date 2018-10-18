@@ -71,10 +71,14 @@ public class TransitiveClosure {
 	
 	public static int[][] getComponents(boolean B[][]) {
 		
+		long startTime = System.currentTimeMillis();
+		
 		int A[][] = new int[B.length][2];
 		
 		
 		
+		long timeSpent = System.currentTimeMillis() - startTime;
+		System.out.println(">> ÂÐÅÌß > " + timeSpent + "ìñ\n");
 		
 		return A;
 		

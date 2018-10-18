@@ -100,8 +100,8 @@ public class TransitiveClosure {
 			
 	}
 	
-	// обратное транзитивное замыкание ОДНОПОТОЧНОЕ
-	public static int[] getReverse(boolean G[][], int index) {
+	// обратное транзитивное замыкание МНОГОПОТОЧНОЕ
+	public static int[] getReverseMULTITHREAD(boolean G[][], int index) {
 			
 		int B[] = new int[G.length];
 		for (int i = 0; i < B.length; i++) B[i] = -1;

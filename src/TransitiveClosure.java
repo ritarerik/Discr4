@@ -1,10 +1,11 @@
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 
 // поиск транзитивных замыканий
 
 public class TransitiveClosure {
 	
-	// прямое транзитивное замыкание ОДНОПОТОЧНОЕ
+	// прямое транзитивное замыкание 
 	public static int[] getDirect(boolean G[][], int index) {
 		
 		int B[] = new int[G[0].length];
@@ -35,7 +36,7 @@ public class TransitiveClosure {
 		
 	}
 	
-	// обратное транзитивное замыкание ОДНОПОТОЧНОЕ
+	// обратное транзитивное замыкание
 	public static int[] getReverse(boolean G[][], int index) {
 		
 		int B[] = new int[G.length];
@@ -69,18 +70,38 @@ public class TransitiveClosure {
 	//----------------------------------------------------------------//
 	//----------------------------------------------------------------//
 	
-	public static int[][] getComponents(boolean B[][]) {
+	public static ArrayList<String> getComponents(boolean G[][]) {
 		
 		long startTime = System.currentTimeMillis();
 		
-		int A[][] = new int[B.length][2];
+		ArrayList<Integer[]> A = new ArrayList<>();		
 		
+		for (int i = 0; i < G[0].length; i++) {			
+			int B[] = getDirect(G, i);			
+			for (int j = 0; j < B.length; j++) 				
+				if (B[j] == -1) {
+					Integer a[] = {i, j};
+					
+					boolean find = false;
+					for (int k = 0; k < A.size(); k++) 
+						if (a[0] == A.get(k)[1] && a[1] == A.get(k)[0]) {
+							find = true;
+							break;
+						}
+					
+					if (!find) A.add(a);			
+				}
+		}		
 		
-		
+		//----------------------------------------------------------------//
+		ArrayList<String> B = new ArrayList<>();		
+		for (Integer a[] : A) B.add("   {x(" + a[0] + "), x(" + a[1] + ")}");
+		for (String b : B) System.out.println(b);
+		//----------------------------------------------------------------//
 		long timeSpent = System.currentTimeMillis() - startTime;
 		System.out.println(">> ВРЕМЯ > " + timeSpent + "мс\n");
-		
-		return A;
+		//----------------------------------------------------------------//
+		return B;
 		
 	}
 	

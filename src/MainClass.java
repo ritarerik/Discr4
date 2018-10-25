@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainClass {
@@ -66,9 +67,7 @@ public class MainClass {
 			        
 			        System.out.println(">> ÏÎÑÈÊ ÑËÀÁÛÕ ÊÎÌÏÎÍÅÍÒ ÃÐÀÔÀ >\n");
 					
-					int D[][] = TransitiveClosure.getComponents(A);
-					Matrix.printComponents(D);
-					
+			        ArrayList<String> D = TransitiveClosure.getComponents(A);					
 					
 				} else { // ïàðàëëåëüíûé àëãîðèòì
 
@@ -83,10 +82,8 @@ public class MainClass {
 					Matrix.printBOOLEAN(A, 'x', 'x'); 
 			        System.out.println("\n");
 			        			        
-			        System.out.println(">> ÑËÀÁÛÅ ÊÎÌÏÎÍÅÍÒÛ ÃÐÀÔÀ >\n");
-					
-					int D[][] = TransitiveClosure.getComponents(A);
-					Matrix.printComponents(D);
+			        System.out.println(">> ÑËÀÁÛÅ ÊÎÌÏÎÍÅÍÒÛ ÃÐÀÔÀ >\n");					
+			        ArrayList<String> D = TransitiveClosure.getComponents(A);
 								        					
 				}
 				

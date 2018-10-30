@@ -72,9 +72,10 @@ public class TransitiveClosure {
 	
 	public static void printComponents(boolean G[][]) {
 		
-		long startTime = System.currentTimeMillis();
-		
 		ArrayList<Integer[]> A = new ArrayList<>();		
+		
+		
+		long startTime = System.currentTimeMillis();
 		
 		for (int i = 0; i < G[0].length; i++) {			
 			int B[] = getDirect(G, i);			
@@ -83,45 +84,38 @@ public class TransitiveClosure {
 					Integer a[] = {i, j};
 					
 					boolean find = false;
-					for (int k = 0; k < A.size(); k++) 
-						if (a[0] == A.get(k)[1] && a[1] == A.get(k)[0]) {
-							find = true;
-							break;
-						}
+//					for (int k = 0; k < A.size(); k++) 
+//						if (a[0] == A.get(k)[1] && a[1] == A.get(k)[0]) {
+//							find = true;
+//							break;
+//						}
 					
 					if (!find)  {
-//						A.add(a);
 						System.out.println("   {x(" + a[0] + "), x(" + a[1] + ")}");
 					}
 				}
 		}		
 		
-		//----------------------------------------------------------------//
-//		ArrayList<String> B = new ArrayList<>();		
-//		for (Integer a[] : A) B.add("   {x(" + a[0] + "), x(" + a[1] + ")}");
-//		for (String b : B) System.out.println(b);
-		//----------------------------------------------------------------//
 		long timeSpent = System.currentTimeMillis() - startTime;
 		System.out.println("\n>> ÂÐÅÌß > " + timeSpent + "ìñ\n");
-		//----------------------------------------------------------------//
-//		return B;
 		
 	}
 	
 	public static void printComponentsMULTITHREAD(boolean G[][]) {
 		
-		long startTime = System.currentTimeMillis();
-		ArrayList<Integer[]> A = new ArrayList<>();	
+			
 		
 		int threadsNumber = 4;
 		WorkingThread wt[] = new WorkingThread[threadsNumber];
 		
+		//----------------------------------------------------------------//
+		long startTime = System.currentTimeMillis();
+		
 		for (int i = 0; i < threadsNumber; i++) {			
-			wt[i] = new WorkingThread(i);
+			wt[i] = new WorkingThread(i, G);
 			wt[i].start();			
 		}
 				
-		//----------------------------------------------------------------//
 		long timeSpent = System.currentTimeMillis() - startTime;
 		System.out.println(">> ÂÐÅÌß > " + timeSpent + "ìñ\n");
 		

@@ -67,7 +67,7 @@ public class MainClass {
 			        
 			        System.out.println(">> ÏÎÑÈÊ ÑËÀÁÛÕ ÊÎÌÏÎÍÅÍÒ ÃÐÀÔÀ >\n");
 					
-			        ArrayList<String> D = TransitiveClosure.getComponents(A);					
+			        TransitiveClosure.printComponents(A);					
 					
 				} else { // ïàðàëëåëüíûé àëãîðèòì
 
@@ -83,7 +83,7 @@ public class MainClass {
 			        System.out.println("\n");
 			        			        
 			        System.out.println(">> ÑËÀÁÛÅ ÊÎÌÏÎÍÅÍÒÛ ÃÐÀÔÀ >\n");					
-			        ArrayList<String> D = TransitiveClosure.getComponents(A);
+			        TransitiveClosure.printComponentsMULTITHREAD(A);
 								        					
 				}
 				

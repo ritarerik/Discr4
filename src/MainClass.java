@@ -9,9 +9,8 @@ public class MainClass {
 		boolean exit = false;
 		Scanner in = new Scanner(System.in);
 					
-			System.out.println("> Последовательный алгоритм >> 1");
-			System.out.println("> Параллельный алгоритм >> 2");
-			System.out.println("> Пример >> 3");
+			System.out.println("> Последовательный и параллельный алгоритмы >> 1");
+			System.out.println("> Пример >> 2");
 			System.out.println("> Выход >> 0");
 			System.out.print("\n  >> ");
 			
@@ -26,37 +25,33 @@ public class MainClass {
 			
 			if (!exit) {			
 				
-				System.out.println();
-				System.out.print("> Количество вершин >> ");
-				
-				int count = 0;
-				
-				if (input == 1 || input == 2) 				
-					try { 
-						count = in.nextInt();				
-						if (count == 0) throw new Exception();				
-					} catch (Exception e) { 
-						System.out.println("\n> Неверный ввод\n");
-					}		
-				
 				switch (input) {
-					case 1 : { // последовательный алгоритм
+					case 1 : { 
 						
-						boolean A[][] = Matrix.createBOOLEAN(count);		        
-//						System.out.println(">> СЛАБЫЕ КОМПОНЕНТЫ ГРАФА >\n");					
+						System.out.println();
+						System.out.print("> Количество вершин (16 -- 4096) >> ");
+						
+						int count = 0;						
+						try { 
+							count = in.nextInt();				
+							if (count == 0 || count < 16 || count > 4096) throw new Exception();				
+						} catch (Exception e) { 
+							System.out.println("\n> Неверный ввод\n");
+							break;
+						}						
+						
+						// последовательный алгоритм
+						System.out.println("\n> Последовательный алгоритм >");
+						boolean A[][] = Matrix.createBOOLEAN(count);					
 				        TransitiveClosure.printComponents(A);
-				        break;
-					}
-						
-					case 2 : { // параллельный алгоритм
-	
-						boolean A[][] = Matrix.createBOOLEAN(count);			        			        
-//				        System.out.println(">> СЛАБЫЕ КОМПОНЕНТЫ ГРАФА >\n");					
-				        TransitiveClosure.printComponentsMULTITHREAD(A);
+				        
+				        // параллельный алгоритм
+				        System.out.print("> Параллельный алгоритм >");
+						TransitiveClosure.printComponentsMULTITHREAD(A);
 				        break;
 					}
 									        					
-					case 3 : {
+					case 2 : {
 						
 						System.out.println();
 						System.out.println(">> МАТРИЦА СМЕЖНОСТИ >\n");

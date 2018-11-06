@@ -1,18 +1,18 @@
 
-public class WorkingThread extends Thread {
+public class WorkingThread2 extends Thread {
 	
 	private static int N = 0;
 	private static boolean G[][];
 	
-	WorkingThread(int n, boolean g[][]) {
+	WorkingThread2(int n, boolean g[][]) {
 		N = n;
-		G = g;			
+		G = g;
 	}
 	
 	@Override
 	public void run() {
 
-		int i = N;
+		int i = N;		
 		long startTime = System.currentTimeMillis();
 		
 		while (i < G[0].length) {

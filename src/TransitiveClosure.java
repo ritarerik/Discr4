@@ -73,8 +73,7 @@ public class TransitiveClosure {
 	public static void printComponents(boolean G[][]) {
 		
 		ArrayList<Integer[]> A = new ArrayList<>();		
-		
-		
+
 		long startTime = System.currentTimeMillis();
 		
 		for (int i = 0; i < G[0].length; i++) {			
@@ -97,28 +96,28 @@ public class TransitiveClosure {
 		}		
 		
 		long timeSpent = System.currentTimeMillis() - startTime;
-		System.out.println("\n>> ÂÐÅÌß > " + timeSpent + "ìñ\n");
+		System.out.println("\n  >> t = " + timeSpent + "ìñ\n");
 		
 	}
 	
 	public static void printComponentsMULTITHREAD(boolean G[][]) {
 		
-			
+//		int threadsNumber = 4;
+//		WorkingThread wt[] = new WorkingThread[threadsNumber];
+//
+//		for (int i = 0; i < threadsNumber; i++) {			
+//			wt[i] = new WorkingThread(i, G);
+//			wt[i].start();			
+//		}
 		
-		int threadsNumber = 4;
-		WorkingThread wt[] = new WorkingThread[threadsNumber];
-		
-		//----------------------------------------------------------------//
-		long startTime = System.currentTimeMillis();
-		
-		for (int i = 0; i < threadsNumber; i++) {			
-			wt[i] = new WorkingThread(i, G);
-			wt[i].start();			
-		}
-				
-		long timeSpent = System.currentTimeMillis() - startTime;
-		System.out.println(">> ÂÐÅÌß > " + timeSpent + "ìñ\n");
-		
+		WorkingThread wt_1 = new WorkingThread(0, G);
+		WorkingThread2 wt_2 = new WorkingThread2(1, G);
+		WorkingThread3 wt_3 = new WorkingThread3(2, G);
+		WorkingThread4 wt_4 = new WorkingThread4(4, G);
+		wt_1.start();
+		wt_2.start();
+		wt_3.start();
+		wt_4.start();
 		
 	}
 	

@@ -1,12 +1,12 @@
 
-public class WorkingThread extends Thread {
+public class WorkingThread3 extends Thread {
 	
 	private static int N = 0;
 	private static boolean G[][];
 	
-	WorkingThread(int n, boolean g[][]) {
+	WorkingThread3(int n, boolean g[][]) {
 		N = n;
-		G = g;			
+		G = g;
 	}
 	
 	@Override

@@ -102,14 +102,6 @@ public class TransitiveClosure {
 	
 	public static void printComponentsMULTITHREAD(boolean G[][]) {
 		
-//		int threadsNumber = 4;
-//		WorkingThread wt[] = new WorkingThread[threadsNumber];
-//
-//		for (int i = 0; i < threadsNumber; i++) {			
-//			wt[i] = new WorkingThread(i, G);
-//			wt[i].start();			
-//		}
-		
 		WorkingThread wt_1 = new WorkingThread(0, G);
 		WorkingThread2 wt_2 = new WorkingThread2(1, G);
 		WorkingThread3 wt_3 = new WorkingThread3(2, G);

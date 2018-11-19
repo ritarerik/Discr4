@@ -55,24 +55,25 @@ public class MainClass {
 						
 						System.out.println();
 						System.out.println(">> ÌÀÒĞÈÖÀ ÑÌÅÆÍÎÑÒÈ >\n");
-	
-						boolean A[][] = {{false, true, true,  false,  false, false},
-								 		 {false, true,  false, false, true,  false},
-										 {false, false, false, false, false, false},
-										 {false, false, true,  false, false, false},
-										 {true,  false, false, true,  false, false},
-										 {true,  false, false, false, true,  true}};					
+
+						boolean A[][] = {{false, true,  true,  false, false, false, true},
+								 		 {false, true,  false, false, true,  false, true},
+										 {false, false, false, false, false, false, false},
+										 {false, false, true,  false, true,  false, false},
+										 {true,  false, false, true,  false, true,  false},
+										 {false, false, true,  false, false, false, true},
+										 {true,  false, false, false, true,  true,  false}};
 						
 						Matrix.printBOOLEAN(A, 'x', 'x'); 
 				        System.out.println("\n");
 				        
 				        System.out.println(">> ÏĞßÌÎÅ ÒĞÀÍÇÈÒÈÂÍÎÅ ÇÀÌÛÊÀÍÈÅ ÄËß 7-ÎÉ ÂÅĞØÈÍÛ (x(6))>\n");
-				        int B[] = TransitiveClosure.getDirect(A, 1); // ÏÅĞÅÄÅËÀÒÜ ÍÀ 6!!!!!!!!!!!!!!!
+				        int B[] = TransitiveClosure.getDirect(A, 6); // ÏÅĞÅÄÅËÀÒÜ ÍÀ 6!!!!!!!!!!!!!!!
 				        Matrix.printINT_VECTOR(B, 'x');
 				        System.out.println("\n");
 				        
 				        System.out.println(">> ÎÁĞÀÒÍÎÅ ÒĞÀÍÇÈÒÈÂÍÎÅ ÇÀÌÛÊÀÍÈÅ ÄËß 7-ÎÉ ÂÅĞØÈÍÛ (x(6))>\n");
-				        int C[] = TransitiveClosure.getReverse(A, 2); // ÏÅĞÅÄÅËÀÒÜ ÍÀ 6!!!!!!!!!!!!!!!
+				        int C[] = TransitiveClosure.getReverse(A, 6); // ÏÅĞÅÄÅËÀÒÜ ÍÀ 6!!!!!!!!!!!!!!!
 				        Matrix.printINT_VECTOR(C, 'x');
 				        System.out.println("\n");
 				        

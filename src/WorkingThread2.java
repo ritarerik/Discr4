@@ -6,30 +6,21 @@ public class WorkingThread2 extends Thread {
 	
 	WorkingThread2(int n, boolean g[][]) {
 		N = n;
-		G = g;
+		G = g;			
 	}
 	
 	@Override
 	public void run() {
 
-		int i = N;		
+		int i = N;
 		long startTime = System.currentTimeMillis();
 		
 		while (i < G[0].length) {
 			int B[] = TransitiveClosure.getDirect(G, i);			
 			for (int j = 0; j < B.length; j++) 				
 				if (B[j] == -1) {
-					Integer a[] = {i, j};
-					
-					boolean find = false;
-//					for (int k = 0; k < A.size(); k++) 
-//						if (a[0] == A.get(k)[1] && a[1] == A.get(k)[0]) {
-//							find = true;
-//							break;
-//						}					
-					if (!find)  {
-						System.out.println("   {x(" + a[0] + "), x(" + a[1] + ")}");
-					}
+					Integer a[] = {i, j};					
+					System.out.println("   {x(" + a[0] + "), x(" + a[1] + ")}");
 				}
 			i+= 4;			
 		}

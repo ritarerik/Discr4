@@ -1,8 +1,8 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainClass {
 
+	@SuppressWarnings("resource")
 	public static void main(String args[])
 	{
 		

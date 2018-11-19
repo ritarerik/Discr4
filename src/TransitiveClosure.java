@@ -1,5 +1,4 @@
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 
 // поиск транзитивных замыканий
 
@@ -72,8 +71,6 @@ public class TransitiveClosure {
 	
 	public static void printComponents(boolean G[][]) {
 		
-		ArrayList<Integer[]> A = new ArrayList<>();		
-
 		long startTime = System.currentTimeMillis();
 		
 		for (int i = 0; i < G[0].length; i++) {			

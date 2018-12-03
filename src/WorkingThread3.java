@@ -17,11 +17,11 @@ public class WorkingThread3 extends Thread {
 		
 		while (i < G[0].length) {
 			int B[] = TransitiveClosure.getDirect(G, i);			
-			for (int j = 0; j < B.length; j++) 				
-				if (B[j] == -1) {
-					Integer a[] = {i, j};					
-					System.out.println("   {x(" + a[0] + "), x(" + a[1] + ")}");
-				}
+//			for (int j = 0; j < B.length; j++) 				
+//				if (B[j] == -1) {
+//					Integer a[] = {i, j};					
+//					System.out.println("   {x(" + a[0] + "), x(" + a[1] + ")}");
+//				}
 			i+= 4;			
 		}
 		
